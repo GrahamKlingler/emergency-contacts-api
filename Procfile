@@ -1,1 +1,1 @@
-web gunicorn api_test/emergency_contacts.wsgi:application --log-file -
+web gunicorn api_test/api_test.wsgi:application --log-file -
