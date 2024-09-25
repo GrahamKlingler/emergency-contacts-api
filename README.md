@@ -25,7 +25,7 @@ This should open a port to your localhost, accessible at [http://127.0.0.1:8000/
 Use this base link to create new contacts. You can make a POST request through Django's GUI, or you can use something like curl in the command line.
 ### `curl -X POST -H "Content-Type: application/json" -d '{"first_name": "myfirstname", "last_name": "mylastname", "phone_number": "myphonenumber"}' https://emergency-contacts-73f6d01ca190.herokuapp.com/emergency_contacts/contacts/`
 
-### use https://emergency-contacts-73f6d01ca190.herokuapp.com/emergency_contacts/contacts/<id> for deleting contacts
+### add an id number to the previous link for deleting contacts
 
 This also has the option of using the Django GUI or a terminal request, like:
 ### `curl -X DELETE https://emergency-contacts-73f6d01ca190.herokuapp.com/emergency_contacts/contacts/4`
