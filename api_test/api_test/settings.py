@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import django_on_heroku
 import dj_database_url
+from boto.s3.connection import S3Connection
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,8 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-with open("/etc/secret_key.txt") as f:
-    SECRET_KEY = f.read().strip()
+try:
+    os.environ['SECRET_KEY']
+except KeyError:
+    s3 = S3Connection(os.environ['SECRET_KEY'])
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
