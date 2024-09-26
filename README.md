@@ -8,7 +8,7 @@ To set up the project locally, clone the repository to your local machine. Make 
 Also set an environment variable titled 'SECRET_KEY' and create your own secret key to use your database.
 
 To create a SQLite database with all needed tables for your project, run
-### `python3 manage.py makemigrations reponame`
+### `python3 manage.py makemigrations emergency_contacts`
 
 Then, migrate
 ### `python3 manage.py migrate`
