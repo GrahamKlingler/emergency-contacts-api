@@ -5,11 +5,11 @@ from .models import Contact
 from .serializer import ContactSerializer
 
 # Create your views here.
-@api_view(['GET'])
-def get_contacts(request):
-    contacts = Contact.objects.all()
-    serializer = ContactSerializer(contacts, many=True)
-    return Response(serializer.data)
+# @api_view(['GET'])
+# def get_contacts(request):
+#     contacts = Contact.objects.all()
+#     serializer = ContactSerializer(contacts, many=True)
+#     return Response(serializer.data)
 
 @api_view(['POST'])
 def create_contact(request):
