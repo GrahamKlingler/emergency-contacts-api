@@ -30,7 +30,7 @@ except KeyError:
     s3 = S3Connection(os.environ['SECRET_KEY'])
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '*'
