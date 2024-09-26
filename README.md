@@ -4,11 +4,16 @@ This API is for storing emergency contacts
 
 ## Setting up the project locally
 
-To set up the project locally, clone the repository to your local machine. Since the SQLite3 file is in the repository, 
-you should be able to use the database without initializing the database and performing migrations. Make sure Django is
-installed on your machine or in your virtual environment. Then navigate to the outermost repo folder.
+To set up the project locally, clone the repository to your local machine. Make sure you install all of the requirements from requirements.txt.
+Also set an environment variable titled 'SECRET_KEY' and create your own secret key to use your database.
 
-To start the Django server locally:
+To create a SQLite database with all needed tables for your project, run
+### `python3 manage.py makemigrations reponame`
+
+Then, migrate
+### `python3 manage.py migrate`
+
+Then, to start the Django server locally:
 
 If in a virtual environment, use:
 ### `manage.py runserver`
@@ -22,7 +27,8 @@ This should open a port to your localhost, accessible at [http://127.0.0.1:8000/
 
 ### use [this link](https://emergency-contacts-73f6d01ca190.herokuapp.com/emergency_contacts/contacts/) for creating contacts
 
-Use this base link to create new contacts. You can make a POST request through Django's GUI, or you can use something like curl in the command line.
+Use this base link to create new contacts. You can make a POST request through Django's GUI, or you can use something 
+like curl in the command line.
 ### `curl -X POST -H "Content-Type: application/json" -d '{"first_name": "myfirstname", "last_name": "mylastname", "phone_number": "myphonenumber"}' https://emergency-contacts-73f6d01ca190.herokuapp.com/emergency_contacts/contacts/`
 
 ### add an id number to the previous link for deleting contacts
