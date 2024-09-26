@@ -5,7 +5,8 @@ This API is for storing emergency contacts
 ## Setting up the project locally
 
 To set up the project locally, clone the repository to your local machine. Make sure you install all of the requirements from requirements.txt.
-Also set an environment variable titled 'SECRET_KEY' and create your own secret key to use your database.
+Delete db.sqlite3 so django can replace it with your own empty database. Also set an environment variable titled 'SECRET_KEY' and create your
+ own secret key to use your database.
 
 To create a SQLite database with all needed tables for your project, run
 ### `python3 manage.py makemigrations emergency_contacts`
